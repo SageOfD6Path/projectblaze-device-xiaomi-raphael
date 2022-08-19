@@ -413,7 +413,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_imsvidecoder
+    libshim_imsvidecoder \
+    libwatermark_shim
 
 # Telephony
 PRODUCT_PACKAGES += \
