@@ -15,20 +15,21 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
-# Inherit some common VoltageOS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+# Inherit some common BlazeOS stuff.
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
-# Official-ify
-VOLTAGE_BUILD_TYPE := OFFICIAL
-
-# UDFPS animations
+#Blaze Stuffs
+TARGET_BOOT_ANIMATION_RES := 1080
+BLAZE_BUILD_TYPE := UNOFFICIAL
+BLAZE_MAINTAINER := ΛＲＣＨＩＴΣＣＴ ツ(@SageOfD6Path)
+WITH_GAPPS := true
+TARGET_USE_PIXEL_CHARGER := true
+EXTRA_FOD_ANIMATIONS := true
 EXTRA_UDFPS_ANIMATIONS := true
-
-# Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 2160
+PRODUCT_CHARACTERISTICS := nosdcard
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := voltage_raphael
+PRODUCT_NAME := blaze_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9T Pro
@@ -38,3 +39,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="raphael"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+BUILD_FINGERPRINT := "google/raven/raven:12/SP2A.220505.002/8353555:user/release-keys"
